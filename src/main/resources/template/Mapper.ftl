@@ -1,4 +1,4 @@
-package ${packageStr};
+package ${basePath}.mapper;
 
 import java.util.List;
 
@@ -8,10 +8,10 @@ import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
-import ${importStr};
+import ${basePath}.entity.${entityClassName};
 
 
-public interface ${className} {
+public interface ${entityName}Mapper {
 
   // 基本列 
   String baseColumn = "${baseColumn}";

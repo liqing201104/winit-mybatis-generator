@@ -13,6 +13,7 @@ public abstract class BaseHandler<T> {
     protected String savePath;
     protected Map<String, String> param = new HashMap<String, String>();
     protected T info;
+    protected String entityName;
     
     public String generateFinalStr() {
         String temp = FileHelper.readFileToString(this.getClass().getClassLoader().getResource("").getPath() + ftlName);

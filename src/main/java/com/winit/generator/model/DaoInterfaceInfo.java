@@ -1,63 +1,42 @@
 package com.winit.generator.model;
 
-
 public class DaoInterfaceInfo {
-    /**
-     * 包路径
-     */
-    private String packageStr;
-    
-    /**
-     * 需要导入的包
-     */
-    private String importStr;
-    
-    /**
-     * 类名
-     */
-    private String interfaceClassName;
-    
-    /**
-    * 实体信息
-    */
-    private EntityInfo entityInfo;
+	/**
+	 * 包路径
+	 */
+	private String packageStr;
 
-    
-    public String getPackageStr() {
-        return packageStr;
-    }
+	/**
+	 * class 文件名称
+	 */
+	private String className;
 
-    
-    public void setPackageStr(String packageStr) {
-        this.packageStr = packageStr;
-    }
+	/**
+	 * 实体信息
+	 */
+	private EntityInfo entityInfo;
 
-    
-    public String getImportStr() {
-        return importStr;
-    }
-
-    
-    public void setImportStr(String importStr) {
-        this.importStr = importStr;
-    }
-
-    public String getInterfaceClassName() {
-		return interfaceClassName;
+	public String getPackageStr() {
+		return packageStr;
 	}
 
-
-	public void setInterfaceClassName(String interfaceClassName) {
-		this.interfaceClassName = interfaceClassName;
+	public void setPackageStr(String packageStr) {
+		this.packageStr = packageStr;
 	}
 
+	public String getClassName() {
+		return className;
+	}
+
+	public void setClassName(String className) {
+		this.className = className;
+	}
 
 	public EntityInfo getEntityInfo() {
-        return entityInfo;
-    }
+		return entityInfo;
+	}
 
-    
-    public void setEntityInfo(EntityInfo entityInfo) {
-        this.entityInfo = entityInfo;
-    }
+	public void setEntityInfo(EntityInfo entityInfo) {
+		this.entityInfo = entityInfo;
+	}
 }

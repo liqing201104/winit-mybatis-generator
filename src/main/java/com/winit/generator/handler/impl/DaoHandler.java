@@ -13,18 +13,16 @@ public class DaoHandler extends BaseHandler<DaoInterfaceInfo> {
         this.info = info;
 		this.savePath = Constants.LOCAL_PATH 
 				+ File.separator + "dao"
-                + File.separator + info.getInterfaceClassName() + ".java";
+                + File.separator + "I"+ info.getEntityInfo().getEntityName() + "Dao.java";
         
     }
     
     @Override
     public void combileParams(DaoInterfaceInfo info) {
-        this.param.put("packageStr", info.getPackageStr());
-        this.param.put("importStr", info.getImportStr());
         this.param.put("entityDesc", info.getEntityInfo().getEntityDesc());
-        this.param.put("interfaceClassName", info.getInterfaceClassName());
         this.param.put("entityClassName", info.getEntityInfo().getClassName());
         this.param.put("entityName", info.getEntityInfo().getEntityName());
+        this.param.put("basePath", Constants.PACKAGE_PREFIX);
     }
 
 }

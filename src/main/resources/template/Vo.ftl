@@ -1,4 +1,4 @@
-package ${packageStr};
+package ${basePath}.vo;
 
 import java.io.Serializable;
 ${importStr}
@@ -15,7 +15,7 @@ ${importStr}
  * </pre>
  * @since 1.
  */
-public class ${className} implements Serializable {
+public class ${entityName}VO implements Serializable {
     private static final long serialVersionUID = 1L;
     
 ${propertiesStr}

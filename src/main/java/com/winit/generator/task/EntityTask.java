@@ -46,19 +46,15 @@ public class EntityTask extends AbstractApplicationTask {
         MapperInfo mapperInfo = null;
         VoInfo voInfo = null;
         for (EntityInfo entityInfo : entityInfos) {
-        	String entryImportStr = entityInfo.getEntityPackage() + "." + entityInfo.getClassName();
         	
             mapperInfo = new MapperInfo();
-            mapperInfo.setClassName(entityInfo.getEntityName() + Constants.MAPPER_XML_SUFFIX);
             mapperInfo.setEntityInfo(entityInfo);
-            mapperInfo.setImportStr(entryImportStr);
             mapperInfo.setPackageStr(Constants.MAPPER_PACKAGE);
             
             mapperInfos.add(mapperInfo);
             
             voInfo = new VoInfo();
             voInfo.setPackageStr(Constants.VO_PACKAGE);
-            voInfo.setClassName(entityInfo.getEntityName() + Constants.VO_SUFFIX);
             voInfo.setEntityInfo(entityInfo);
             voList.add(voInfo);
         }

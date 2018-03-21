@@ -36,26 +36,12 @@ public class MapperTask extends AbstractApplicationTask {
             
             daoInterfaceInfo = new DaoInterfaceInfo();
             daoInterfaceInfo.setEntityInfo(mapperInfo.getEntityInfo());
-            daoInterfaceInfo.setImportStr(mapperInfo.getImportStr());
-            daoInterfaceInfo.setInterfaceClassName("I"+ mapperInfo.getEntityInfo().getEntityName() + Constants.DAO_SUFFIX);
             daoInterfaceInfo.setPackageStr(Constants.DAO_PACKAGE);
             
             daoInterfaceInfoList.add(daoInterfaceInfo);
             
-            
             daoImplInfo = new DaoImplInfo();
-            String autowiredMapperName = mapperInfo.getClassName();
-            String interfaceClassName = "I" + mapperInfo.getEntityInfo().getEntityName() + Constants.DAO_SUFFIX;
-            
-            daoImplInfo.setAutowiredMapperClass(autowiredMapperName);
-            daoImplInfo.setClassName(mapperInfo.getEntityInfo().getEntityName() + Constants.DAO_SUFFIX + "Impl");
             daoImplInfo.setEntityInfo(mapperInfo.getEntityInfo());
-            daoImplInfo.setImportMapperStr(mapperInfo.getPackageStr() + "." + autowiredMapperName);
-            daoImplInfo.setImportStr(mapperInfo.getImportStr());
-            daoImplInfo.setInterfaceClassName(interfaceClassName);
-            daoImplInfo.setPackageStr(Constants.DAO_PACKAGE + ".impl");
-            daoImplInfo.setIntefaceImportStr(Constants.DAO_PACKAGE + "." + interfaceClassName);
-            
             daoImplInfoList.add(daoImplInfo);
             
             handler.execute();

@@ -1,8 +1,8 @@
-package ${packageStr};
+package ${basePath}.dao;
 
 import java.util.List;
 
-import ${importStr};
+import ${basePath}.entity.${entityClassName};
 
 /**
  * 
@@ -11,7 +11,7 @@ import ${importStr};
  * ${author} 	1.0  	${time} 	Created
  *
  */
-public interface ${interfaceClassName} {
+public interface I${entityName}Dao {
     
     Long insertBatch(List<${entityClassName}> list);
     

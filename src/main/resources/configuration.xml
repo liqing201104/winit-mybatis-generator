@@ -10,9 +10,9 @@
   <category name="base" description="基础配置">
     <item name="database" value="mysql" description="数据库"/>
     <item name="schemaPattern" value="root" description="每个用户对应一个同名的schema"/>
-    <item name="tableNames" value="ueb_cdiscount_order" description="需要工具生成的表，逗号分隔"/>
-    <item name="entityNames" value="UebCdiscountOrder" description="实体名，逗号分隔， 与上面的表名一一对应"/>
-    <item name="entityDescs" value="用户" description="实体描述， 与上面的实体名一一对应"/>
+    <item name="tableNames" value="ueb_cdiscount_order,ueb_cdiscount_order_address,ueb_cdiscount_order_item,ueb_cdiscount_order_voucher" description="需要工具生成的表，逗号分隔"/>
+    <item name="entityNames" value="UebCdiscountOrder,UebCdiscountOrderAddress,UebCdiscountOrderItem,UebCdiscountOrderVoucher" description="实体名，逗号分隔， 与上面的表名一一对应"/>
+    <item name="entityDescs" value="1,2,3,4," description="实体描述， 与上面的实体名一一对应"/>
   </category>
   
 </system>

@@ -11,26 +11,26 @@ import com.winit.generator.model.VoInfo;
 
 public class VoHandler extends BaseHandler<VoInfo> {
     
-    
     public VoHandler(String ftlName, VoInfo info){
+    	this.entityName = info.getEntityInfo().getEntityName();
         this.ftlName = ftlName;
         this.info = info;
         this.savePath = Constants.LOCAL_PATH 
                 + File.separator + "vo"
-                + File.separator + info.getClassName() + ".java";
+                + File.separator + entityName + "VO.java";
     }
 
     @Override
     public void combileParams(VoInfo info) {
         EntityInfo entityInfo = info.getEntityInfo();
-        this.param.put("packageStr", info.getPackageStr());
         StringBuilder sb = new StringBuilder();
         for (String str : entityInfo.getImports()) {
             sb.append("import ").append(str).append(";\r\n");
         }
         this.param.put("importStr", sb.toString());
         this.param.put("entityDesc", entityInfo.getEntityDesc());
-        this.param.put("className", info.getClassName());
+        this.param.put("entityName", entityInfo.getEntityName());
+        this.param.put("basePath", Constants.PACKAGE_PREFIX);
         
         //生成属性，getter,setter方法
         sb = new StringBuilder();

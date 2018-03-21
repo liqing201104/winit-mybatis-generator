@@ -10,11 +10,13 @@ import com.winit.generator.model.MapperInfo;
 
 public class MapperHandler extends BaseHandler<MapperInfo> {
     public MapperHandler(String ftlName, MapperInfo info) {
+    	this.entityName = info.getEntityInfo().getEntityName();
+    	
         this.ftlName = ftlName;
         this.info = info;
         this.savePath = Constants.LOCAL_PATH 
                 + File.separator + "mapper"
-                + File.separator + info.getClassName() + ".java";
+                + File.separator + entityName + "Mapper.java";
         
     }
     
@@ -22,15 +24,13 @@ public class MapperHandler extends BaseHandler<MapperInfo> {
     public void combileParams(MapperInfo info) {
       //<result column="SU_ROUTE_CODE" jdbcType="VARCHAR" property="suRouteCode" />
     	
-    	this.param.put("packageStr", info.getPackageStr());
-        this.param.put("importStr", info.getImportStr());
         this.param.put("entityDesc", info.getEntityInfo().getEntityDesc());
-        this.param.put("className", info.getClassName());
-        this.param.put("entityClassName", info.getEntityInfo().getClassName());
     	
         this.param.put("entityType", info.getEntityInfo().getPackageClassName());
         this.param.put("tableName", info.getEntityInfo().getTableName());
         this.param.put("entityName", info.getEntityInfo().getEntityName());
+        this.param.put("entityClassName", info.getEntityInfo().getClassName());
+        this.param.put("basePath", Constants.PACKAGE_PREFIX);
         
         StringBuilder baseColumn = new StringBuilder();
         StringBuilder insertBatchColumns = new StringBuilder();

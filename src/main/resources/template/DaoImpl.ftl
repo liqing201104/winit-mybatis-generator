@@ -1,13 +1,13 @@
-package ${packageStr};
+package ${basePath}.dao.impl;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import ${importStr};
-import ${importMapperStr};
-import ${intefaceImportStr};
+import ${basePath}.entity.${entityName}Entity;
+import ${basePath}.mapper.${entityName}Mapper;
+import ${basePath}.dao.I${entityName}Dao;
 /**
  * 
  * ${entityDesc}Dao
@@ -16,10 +16,10 @@ import ${intefaceImportStr};
  *
  */
 @Repository
-public class ${className} implements ${interfaceClassName}{
+public class ${entityName}DaoImpl implements I${entityName}Dao {
     
     @Autowired
-	${autowiredMapperClass} ${autowiredMapperName};
+	${entityName}Mapper ${autowiredMapperName};
     
     public Long insertBatch(List<${entityClassName}> list) {
     	return ${autowiredMapperName}.insertBatch(list);

@@ -1,49 +1,43 @@
 package com.winit.generator.model;
 
-
 public class VoInfo {
-    /**
-     * 包路径
-     */
-    private String packageStr;
-    
-    /**
-     * 类名
-     */
-    private String className;
-    
-    /**
-     * 实体信息
-     */
-     private EntityInfo entityInfo;
+	/**
+	 * 包路径
+	 */
+	private String packageStr;
 
-    
-    public String getPackageStr() {
-        return packageStr;
-    }
+	/**
+	 * class 类名
+	 */
+	private String className;
 
-    
-    public void setPackageStr(String packageStr) {
-        this.packageStr = packageStr;
-    }
+	/**
+	 * 实体信息
+	 */
+	private EntityInfo entityInfo;
 
-    
-    public String getClassName() {
-        return className;
-    }
+	public String getPackageStr() {
+		return packageStr;
+	}
 
-    
-    public void setClassName(String className) {
-        this.className = className;
-    }
+	public void setPackageStr(String packageStr) {
+		this.packageStr = packageStr;
+	}
 
-    
-    public EntityInfo getEntityInfo() {
-        return entityInfo;
-    }
+	public EntityInfo getEntityInfo() {
+		return entityInfo;
+	}
 
-    
-    public void setEntityInfo(EntityInfo entityInfo) {
-        this.entityInfo = entityInfo;
-    }
+	public void setEntityInfo(EntityInfo entityInfo) {
+		this.entityInfo = entityInfo;
+	}
+
+	public String getClassName() {
+		return className;
+	}
+
+	public void setClassName(String className) {
+		this.className = className;
+	}
+
 }

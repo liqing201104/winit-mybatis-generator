@@ -21,14 +21,14 @@ public class EntityHandler extends BaseHandler<EntityInfo> {
     
     @Override
     public void combileParams(EntityInfo entityInfo) {
-        this.param.put("packageStr", entityInfo.getEntityPackage());
         StringBuilder sb = new StringBuilder();
         for (String str : entityInfo.getImports()) {
             sb.append("import ").append(str).append(";\r\n");
         }
         this.param.put("importStr", sb.toString());
         this.param.put("entityDesc", entityInfo.getEntityDesc());
-        this.param.put("className", entityInfo.getClassName());
+        this.param.put("entityName", entityInfo.getEntityName());
+        this.param.put("basePath", Constants.PACKAGE_PREFIX);
         
         //生成属性，getter,setter方法
         sb = new StringBuilder();
