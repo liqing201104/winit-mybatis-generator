@@ -4,7 +4,7 @@ import java.io.File;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import com.winit.generator.config.Configuration;
+import com.winit.generator.config.Constants;
 import com.winit.generator.handler.BaseHandler;
 import com.winit.generator.model.EntityInfo;
 
@@ -13,8 +13,8 @@ public class EntityHandler extends BaseHandler<EntityInfo> {
     public EntityHandler(String ftlName, EntityInfo info) {
         this.ftlName = ftlName;
         this.info = info;
-        this.savePath = Configuration.getString("base.baseDir") 
-                + File.separator + Configuration.getString("entity.path")
+        this.savePath = Constants.LOCAL_PATH 
+                + File.separator + "entity"
                 + File.separator + info.getClassName() + ".java";
         
     }

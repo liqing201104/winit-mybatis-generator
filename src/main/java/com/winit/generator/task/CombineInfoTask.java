@@ -2,15 +2,14 @@ package com.winit.generator.task;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.LinkedHashMap;
 import java.util.HashSet;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
-import com.winit.generator.Constants;
-import com.winit.generator.config.Configuration;
+import com.winit.generator.config.Constants;
 import com.winit.generator.framework.AbstractApplicationTask;
 import com.winit.generator.framework.context.ApplicationContext;
 import com.winit.generator.model.ColumnInfo;
@@ -27,11 +26,9 @@ public class CombineInfoTask extends AbstractApplicationTask {
         logger.info("组装信息");
         
         //获取实体相关的配置
-        String packageName = Configuration.getString("entity.package");
-        //存放路径
-        String path = Configuration.getString("entity.path");
+        String packageName = Constants.ENTITY_PACKAGE;
         
-        logger.info("所有实体的包名为{}， 路径为：{}", packageName, path);
+        logger.info("所有实体的包名为{}， 路径为：{}", packageName);
         
         //获取表和实体的映射集合
         Map<String, String> table2Entities = (Map<String, String>) context.getAttribute("tableName.to.entityName");

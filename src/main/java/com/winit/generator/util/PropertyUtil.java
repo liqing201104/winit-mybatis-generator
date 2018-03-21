@@ -12,7 +12,7 @@ import java.util.Properties;
 
 import org.apache.logging.log4j.Logger;
 
-import com.winit.generator.Constants;
+import com.winit.generator.config.Constants;
 
 
 /**

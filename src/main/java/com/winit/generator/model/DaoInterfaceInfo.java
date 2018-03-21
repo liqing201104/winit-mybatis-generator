@@ -1,7 +1,7 @@
 package com.winit.generator.model;
 
 
-public class DaoInfo {
+public class DaoInterfaceInfo {
     /**
      * 包路径
      */
@@ -15,7 +15,7 @@ public class DaoInfo {
     /**
      * 类名
      */
-    private String className;
+    private String interfaceClassName;
     
     /**
     * 实体信息
@@ -42,18 +42,17 @@ public class DaoInfo {
         this.importStr = importStr;
     }
 
-    
-    public String getClassName() {
-        return className;
-    }
+    public String getInterfaceClassName() {
+		return interfaceClassName;
+	}
 
-    
-    public void setClassName(String className) {
-        this.className = className;
-    }
 
-    
-    public EntityInfo getEntityInfo() {
+	public void setInterfaceClassName(String interfaceClassName) {
+		this.interfaceClassName = interfaceClassName;
+	}
+
+
+	public EntityInfo getEntityInfo() {
         return entityInfo;
     }
 

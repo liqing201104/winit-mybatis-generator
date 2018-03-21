@@ -1,8 +1,9 @@
-package com.winit.generator.application;
+package com.winit.generator;
 
 import com.winit.generator.framework.Application;
 import com.winit.generator.task.CombineInfoTask;
-import com.winit.generator.task.DaoTask;
+import com.winit.generator.task.DaoImplTask;
+import com.winit.generator.task.DaoInterfaceTask;
 import com.winit.generator.task.EntityTask;
 import com.winit.generator.task.InitTask;
 import com.winit.generator.task.MapperTask;
@@ -29,8 +30,9 @@ public class WinitGeneratorApplication {
         application.addApplicationTask(InitTask.class)
         .addApplicationTask(CombineInfoTask.class)
         .addApplicationTask(EntityTask.class)
-        .addApplicationTask(DaoTask.class)
         .addApplicationTask(MapperTask.class)
+        .addApplicationTask(DaoInterfaceTask.class)
+        .addApplicationTask(DaoImplTask.class)
         .addApplicationTask(VoTask.class)
         .work();
     }

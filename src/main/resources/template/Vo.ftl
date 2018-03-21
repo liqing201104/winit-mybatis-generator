@@ -1,4 +1,5 @@
 package ${packageStr};
+
 import java.io.Serializable;
 ${importStr}
 

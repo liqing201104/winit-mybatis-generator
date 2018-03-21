@@ -2,27 +2,27 @@ package com.winit.generator.handler.impl;
 
 import java.io.File;
 
-import com.winit.generator.config.Configuration;
+import com.winit.generator.config.Constants;
 import com.winit.generator.handler.BaseHandler;
-import com.winit.generator.model.DaoInfo;
+import com.winit.generator.model.DaoInterfaceInfo;
 
 
-public class DaoHandler extends BaseHandler<DaoInfo> {
-    public DaoHandler(String ftlName, DaoInfo info) {
+public class DaoHandler extends BaseHandler<DaoInterfaceInfo> {
+    public DaoHandler(String ftlName, DaoInterfaceInfo info) {
         this.ftlName = ftlName;
         this.info = info;
-        this.savePath = Configuration.getString("base.baseDir") 
-                + File.separator + Configuration.getString("dao.path")
-                + File.separator + info.getClassName() + ".java";
+		this.savePath = Constants.LOCAL_PATH 
+				+ File.separator + "dao"
+                + File.separator + info.getInterfaceClassName() + ".java";
         
     }
     
     @Override
-    public void combileParams(DaoInfo info) {
+    public void combileParams(DaoInterfaceInfo info) {
         this.param.put("packageStr", info.getPackageStr());
         this.param.put("importStr", info.getImportStr());
         this.param.put("entityDesc", info.getEntityInfo().getEntityDesc());
-        this.param.put("className", info.getClassName());
+        this.param.put("interfaceClassName", info.getInterfaceClassName());
         this.param.put("entityClassName", info.getEntityInfo().getClassName());
         this.param.put("entityName", info.getEntityInfo().getEntityName());
     }

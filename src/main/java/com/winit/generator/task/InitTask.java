@@ -8,8 +8,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.winit.generator.Constants;
 import com.winit.generator.config.Configuration;
+import com.winit.generator.config.Constants;
 import com.winit.generator.framework.AbstractApplicationTask;
 import com.winit.generator.framework.context.ApplicationContext;
 import com.winit.generator.model.ColumnInfo;
